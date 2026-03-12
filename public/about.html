@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - Professor Feedback Analyzer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" style="font-weight: 800; font-size:1.2rem; color: var(--accent);">Professor Feedback Analyzer</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Upload Assignment</a>
+        <a href="dashboard.html">AI Dashboard</a>
+        <a href="history.html">History</a>
+        <a href="about.html">About</a>
+        <button class="button" id="themeToggle">🌙 Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>About Professor Feedback Analyzer</h2>
+      <p>This prototype uses AI analysis to help college students interpret professor feedback, identify strengths and weaknesses, and receive concrete improvement tips.</p>
+      <p>Key features include:</p>
+      <ul>
+        <li>Upload environment for PDF/DOCX/TXT content and direct comment input</li>
+        <li>AI report with structured strengths, weaknesses, key learning areas, and grade prediction</li>
+        <li>Visual dashboard with charts and grade tracking</li>
+        <li>History storage and PDF export for documentation</li>
+        <li>Dark mode, responsive layout, and professional design</li>
+      </ul>
+      <p>Technology stack: Node.js backend, OpenAI integration (configurable), Chart.js, jsPDF, and modern vanilla JS frontend.</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist/build/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

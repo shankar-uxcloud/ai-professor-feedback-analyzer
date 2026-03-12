@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload Assignment - Professor Feedback Analyzer</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a href="index.html" style="font-weight: 800; font-size:1.2rem; color: var(--accent);">Professor Feedback Analyzer</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="upload.html">Upload Assignment</a>
+        <a href="dashboard.html">AI Dashboard</a>
+        <a href="history.html">History</a>
+        <a href="about.html">About</a>
+        <button class="button" id="themeToggle">🌙 Dark</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h2>Upload Assignment & Feedback</h2>
+      <p>Supported file types: PDF, DOCX, TXT. Or copy-paste text directly.</p>
+
+      <form id="analyzeForm">
+        <label>Student Name</label>
+        <input class="input" id="studentName" type="text" placeholder="Your name" value="Student" />
+
+        <label>Assignment Title</label>
+        <input class="input" id="assignmentTitle" type="text" placeholder="Assignment title" value="Research report" />
+
+        <label>Assignment File</label>
+        <input class="input" id="assignmentFile" type="file" accept=".pdf,.docx,.txt" />
+        <div id="filePreview" style="font-size:0.9rem;color:var(--muted);margin-bottom:0.8rem;"></div>
+
+        <label>Assignment Text</label>
+        <textarea class="input textarea-autogrow" id="assignmentText" placeholder="Paste assignment text here..."></textarea>
+
+        <label>Professor Comments / Feedback</label>
+        <textarea class="input textarea-autogrow" id="professorComments" placeholder="Paste professor comments here..."></textarea>
+
+        <input type="submit" class="button" value="Analyze Feedback" />
+      </form>
+    </div>
+
+    <div class="panel" style="margin-top:1rem;">
+      <h3 class="section-title">Sample feedback (paste into feedback field)</h3>
+      <p>"Great ideas and strong sources, but your argument needs a clearer structure and stronger conclusion. Some claims lack citations and word choice is often passive."</p>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist/build/pdf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mammoth/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
